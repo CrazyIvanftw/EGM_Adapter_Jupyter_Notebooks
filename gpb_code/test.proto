@@ -1,0 +1,17 @@
+package lth.egmTest;
+
+message Header
+{ 
+    required int32 sender = 1;
+}
+
+message Body
+{ 
+    required string msg = 1;
+}
+
+message Packet
+{
+    required Header header = 1;
+    required Body body = 2;
+}
