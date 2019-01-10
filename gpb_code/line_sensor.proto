@@ -1,0 +1,20 @@
+// Definition of the communication protocol for the Line sensor smart component
+// -Gregory Austin
+package lth.line_sensor;
+
+message Point
+{
+    required uint32 x = 1;
+    required uint32 y = 2;
+    required uint32 z = 3;
+}
+
+message LineSensor
+{
+    required Point sensedPoint = 1;
+    required Point start = 2;
+    required Point end = 3;
+    required uint32 radius = 4;
+    required string sensedPart = 5;
+    required uint32 sensorID = 6;
+}
