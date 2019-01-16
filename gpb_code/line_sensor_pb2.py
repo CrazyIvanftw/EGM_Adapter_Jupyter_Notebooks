@@ -11,7 +11,7 @@ from google.protobuf import descriptor_pb2
 DESCRIPTOR = descriptor.FileDescriptor(
   name='line_sensor.proto',
   package='lth.line_sensor',
-  serialized_pb='\n\x11line_sensor.proto\x12\x0flth.line_sensor\"(\n\x05Point\x12\t\n\x01x\x18\x01 \x02(\r\x12\t\n\x01y\x18\x02 \x02(\r\x12\t\n\x01z\x18\x03 \x02(\r\"\xbb\x01\n\nLineSensor\x12+\n\x0bsensedPoint\x18\x01 \x02(\x0b\x32\x16.lth.line_sensor.Point\x12%\n\x05start\x18\x02 \x02(\x0b\x32\x16.lth.line_sensor.Point\x12#\n\x03\x65nd\x18\x03 \x02(\x0b\x32\x16.lth.line_sensor.Point\x12\x0e\n\x06radius\x18\x04 \x02(\r\x12\x12\n\nsensedPart\x18\x05 \x02(\t\x12\x10\n\x08sensorID\x18\x06 \x02(\r')
+  serialized_pb='\n\x11line_sensor.proto\x12\x0flth.line_sensor\"(\n\x05Point\x12\t\n\x01x\x18\x01 \x02(\x01\x12\t\n\x01y\x18\x02 \x02(\x01\x12\t\n\x01z\x18\x03 \x02(\x01\"\xbb\x01\n\nLineSensor\x12+\n\x0bsensedPoint\x18\x01 \x02(\x0b\x32\x16.lth.line_sensor.Point\x12%\n\x05start\x18\x02 \x02(\x0b\x32\x16.lth.line_sensor.Point\x12#\n\x03\x65nd\x18\x03 \x02(\x0b\x32\x16.lth.line_sensor.Point\x12\x0e\n\x06radius\x18\x04 \x02(\x01\x12\x12\n\nsensedPart\x18\x05 \x02(\t\x12\x10\n\x08sensorID\x18\x06 \x02(\r')
 
 
 
@@ -25,21 +25,21 @@ _POINT = descriptor.Descriptor(
   fields=[
     descriptor.FieldDescriptor(
       name='x', full_name='lth.line_sensor.Point.x', index=0,
-      number=1, type=13, cpp_type=3, label=2,
+      number=1, type=1, cpp_type=5, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='y', full_name='lth.line_sensor.Point.y', index=1,
-      number=2, type=13, cpp_type=3, label=2,
+      number=2, type=1, cpp_type=5, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
       name='z', full_name='lth.line_sensor.Point.z', index=2,
-      number=3, type=13, cpp_type=3, label=2,
+      number=3, type=1, cpp_type=5, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -88,7 +88,7 @@ _LINESENSOR = descriptor.Descriptor(
       options=None),
     descriptor.FieldDescriptor(
       name='radius', full_name='lth.line_sensor.LineSensor.radius', index=3,
-      number=4, type=13, cpp_type=3, label=2,
+      number=4, type=1, cpp_type=5, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,

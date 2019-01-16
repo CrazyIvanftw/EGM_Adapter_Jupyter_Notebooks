@@ -33,11 +33,11 @@ namespace lth.line_sensor {
         byte[] descriptorData = global::System.Convert.FromBase64String(
             string.Concat(
               "ChFsaW5lX3NlbnNvci5wcm90bxIPbHRoLmxpbmVfc2Vuc29yIigKBVBvaW50", 
-              "EgkKAXgYASACKA0SCQoBeRgCIAIoDRIJCgF6GAMgAigNIrsBCgpMaW5lU2Vu", 
+              "EgkKAXgYASACKAESCQoBeRgCIAIoARIJCgF6GAMgAigBIrsBCgpMaW5lU2Vu", 
               "c29yEisKC3NlbnNlZFBvaW50GAEgAigLMhYubHRoLmxpbmVfc2Vuc29yLlBv", 
               "aW50EiUKBXN0YXJ0GAIgAigLMhYubHRoLmxpbmVfc2Vuc29yLlBvaW50EiMK", 
               "A2VuZBgDIAIoCzIWLmx0aC5saW5lX3NlbnNvci5Qb2ludBIOCgZyYWRpdXMY", 
-            "BCACKA0SEgoKc2Vuc2VkUGFydBgFIAIoCRIQCghzZW5zb3JJRBgGIAIoDQ=="));
+            "BCACKAESEgoKc2Vuc2VkUGFydBgFIAIoCRIQCghzZW5zb3JJRBgGIAIoDQ=="));
         pbd::FileDescriptor.InternalDescriptorAssigner assigner = delegate(pbd::FileDescriptor root) {
           descriptor = root;
           internal__static_lth_line_sensor_Point__Descriptor = Descriptor.MessageTypes[0];
@@ -64,7 +64,7 @@ namespace lth.line_sensor {
     private Point() { }
     private static readonly Point defaultInstance = new Point().MakeReadOnly();
     private static readonly string[] _pointFieldNames = new string[] { "x", "y", "z" };
-    private static readonly uint[] _pointFieldTags = new uint[] { 8, 16, 24 };
+    private static readonly uint[] _pointFieldTags = new uint[] { 9, 17, 25 };
     public static Point DefaultInstance {
       get { return defaultInstance; }
     }
@@ -87,34 +87,31 @@ namespace lth.line_sensor {
     
     public const int XFieldNumber = 1;
     private bool hasX;
-    private uint x_;
+    private double x_;
     public bool HasX {
       get { return hasX; }
     }
-    [global::System.CLSCompliant(false)]
-    public uint X {
+    public double X {
       get { return x_; }
     }
     
     public const int YFieldNumber = 2;
     private bool hasY;
-    private uint y_;
+    private double y_;
     public bool HasY {
       get { return hasY; }
     }
-    [global::System.CLSCompliant(false)]
-    public uint Y {
+    public double Y {
       get { return y_; }
     }
     
     public const int ZFieldNumber = 3;
     private bool hasZ;
-    private uint z_;
+    private double z_;
     public bool HasZ {
       get { return hasZ; }
     }
-    [global::System.CLSCompliant(false)]
-    public uint Z {
+    public double Z {
       get { return z_; }
     }
     
@@ -131,13 +128,13 @@ namespace lth.line_sensor {
       CalcSerializedSize();
       string[] field_names = _pointFieldNames;
       if (hasX) {
-        output.WriteUInt32(1, field_names[0], X);
+        output.WriteDouble(1, field_names[0], X);
       }
       if (hasY) {
-        output.WriteUInt32(2, field_names[1], Y);
+        output.WriteDouble(2, field_names[1], Y);
       }
       if (hasZ) {
-        output.WriteUInt32(3, field_names[2], Z);
+        output.WriteDouble(3, field_names[2], Z);
       }
       UnknownFields.WriteTo(output);
     }
@@ -157,13 +154,13 @@ namespace lth.line_sensor {
       
       size = 0;
       if (hasX) {
-        size += pb::CodedOutputStream.ComputeUInt32Size(1, X);
+        size += pb::CodedOutputStream.ComputeDoubleSize(1, X);
       }
       if (hasY) {
-        size += pb::CodedOutputStream.ComputeUInt32Size(2, Y);
+        size += pb::CodedOutputStream.ComputeDoubleSize(2, Y);
       }
       if (hasZ) {
-        size += pb::CodedOutputStream.ComputeUInt32Size(3, Z);
+        size += pb::CodedOutputStream.ComputeDoubleSize(3, Z);
       }
       size += UnknownFields.SerializedSize;
       memoizedSerializedSize = size;
@@ -339,16 +336,16 @@ namespace lth.line_sensor {
               ParseUnknownField(input, unknownFields, extensionRegistry, tag, field_name);
               break;
             }
-            case 8: {
-              result.hasX = input.ReadUInt32(ref result.x_);
+            case 9: {
+              result.hasX = input.ReadDouble(ref result.x_);
               break;
             }
-            case 16: {
-              result.hasY = input.ReadUInt32(ref result.y_);
+            case 17: {
+              result.hasY = input.ReadDouble(ref result.y_);
               break;
             }
-            case 24: {
-              result.hasZ = input.ReadUInt32(ref result.z_);
+            case 25: {
+              result.hasZ = input.ReadDouble(ref result.z_);
               break;
             }
           }
@@ -364,13 +361,11 @@ namespace lth.line_sensor {
       public bool HasX {
         get { return result.hasX; }
       }
-      [global::System.CLSCompliant(false)]
-      public uint X {
+      public double X {
         get { return result.X; }
         set { SetX(value); }
       }
-      [global::System.CLSCompliant(false)]
-      public Builder SetX(uint value) {
+      public Builder SetX(double value) {
         PrepareBuilder();
         result.hasX = true;
         result.x_ = value;
@@ -379,20 +374,18 @@ namespace lth.line_sensor {
       public Builder ClearX() {
         PrepareBuilder();
         result.hasX = false;
-        result.x_ = 0;
+        result.x_ = 0D;
         return this;
       }
       
       public bool HasY {
         get { return result.hasY; }
       }
-      [global::System.CLSCompliant(false)]
-      public uint Y {
+      public double Y {
         get { return result.Y; }
         set { SetY(value); }
       }
-      [global::System.CLSCompliant(false)]
-      public Builder SetY(uint value) {
+      public Builder SetY(double value) {
         PrepareBuilder();
         result.hasY = true;
         result.y_ = value;
@@ -401,20 +394,18 @@ namespace lth.line_sensor {
       public Builder ClearY() {
         PrepareBuilder();
         result.hasY = false;
-        result.y_ = 0;
+        result.y_ = 0D;
         return this;
       }
       
       public bool HasZ {
         get { return result.hasZ; }
       }
-      [global::System.CLSCompliant(false)]
-      public uint Z {
+      public double Z {
         get { return result.Z; }
         set { SetZ(value); }
       }
-      [global::System.CLSCompliant(false)]
-      public Builder SetZ(uint value) {
+      public Builder SetZ(double value) {
         PrepareBuilder();
         result.hasZ = true;
         result.z_ = value;
@@ -423,7 +414,7 @@ namespace lth.line_sensor {
       public Builder ClearZ() {
         PrepareBuilder();
         result.hasZ = false;
-        result.z_ = 0;
+        result.z_ = 0D;
         return this;
       }
     }
@@ -437,7 +428,7 @@ namespace lth.line_sensor {
     private LineSensor() { }
     private static readonly LineSensor defaultInstance = new LineSensor().MakeReadOnly();
     private static readonly string[] _lineSensorFieldNames = new string[] { "end", "radius", "sensedPart", "sensedPoint", "sensorID", "start" };
-    private static readonly uint[] _lineSensorFieldTags = new uint[] { 26, 32, 42, 10, 48, 18 };
+    private static readonly uint[] _lineSensorFieldTags = new uint[] { 26, 33, 42, 10, 48, 18 };
     public static LineSensor DefaultInstance {
       get { return defaultInstance; }
     }
@@ -490,12 +481,11 @@ namespace lth.line_sensor {
     
     public const int RadiusFieldNumber = 4;
     private bool hasRadius;
-    private uint radius_;
+    private double radius_;
     public bool HasRadius {
       get { return hasRadius; }
     }
-    [global::System.CLSCompliant(false)]
-    public uint Radius {
+    public double Radius {
       get { return radius_; }
     }
     
@@ -548,7 +538,7 @@ namespace lth.line_sensor {
         output.WriteMessage(3, field_names[0], End);
       }
       if (hasRadius) {
-        output.WriteUInt32(4, field_names[1], Radius);
+        output.WriteDouble(4, field_names[1], Radius);
       }
       if (hasSensedPart) {
         output.WriteString(5, field_names[2], SensedPart);
@@ -583,7 +573,7 @@ namespace lth.line_sensor {
         size += pb::CodedOutputStream.ComputeMessageSize(3, End);
       }
       if (hasRadius) {
-        size += pb::CodedOutputStream.ComputeUInt32Size(4, Radius);
+        size += pb::CodedOutputStream.ComputeDoubleSize(4, Radius);
       }
       if (hasSensedPart) {
         size += pb::CodedOutputStream.ComputeStringSize(5, SensedPart);
@@ -801,8 +791,8 @@ namespace lth.line_sensor {
               End = subBuilder.BuildPartial();
               break;
             }
-            case 32: {
-              result.hasRadius = input.ReadUInt32(ref result.radius_);
+            case 33: {
+              result.hasRadius = input.ReadDouble(ref result.radius_);
               break;
             }
             case 42: {
@@ -946,13 +936,11 @@ namespace lth.line_sensor {
       public bool HasRadius {
         get { return result.hasRadius; }
       }
-      [global::System.CLSCompliant(false)]
-      public uint Radius {
+      public double Radius {
         get { return result.Radius; }
         set { SetRadius(value); }
       }
-      [global::System.CLSCompliant(false)]
-      public Builder SetRadius(uint value) {
+      public Builder SetRadius(double value) {
         PrepareBuilder();
         result.hasRadius = true;
         result.radius_ = value;
@@ -961,7 +949,7 @@ namespace lth.line_sensor {
       public Builder ClearRadius() {
         PrepareBuilder();
         result.hasRadius = false;
-        result.radius_ = 0;
+        result.radius_ = 0D;
         return this;
       }
       
